@@ -13,23 +13,25 @@ fun main() {
 
     val arm = mutableListOf<String>()
     println("Olá!")
-    menu()
+    menu(arm)
     println("......")
+
+    do {
 
     println("Você deseja voltar ao menu anterior? \n (Sim ou Não)")
     val menu = readLine()!!
 
     when (menu) {
-        "Sim" -> menu()
-        "sim" -> menu()
+        "Sim" -> menu(arm)
+        "sim" -> menu(arm)
         "Não" -> println("Finalizado.")
         "não" -> println("Finalizado.")
     }
+}while(menu.compareTo("sim",true)==0)
 }
 
-fun armazenar(){
+fun armazenar(arm:MutableList<String>){
     while (true) {
-        val arm = mutableListOf<String>()
         print("Adicione um dado na lista: ")
         val dado = readLine()!!
 
@@ -44,16 +46,15 @@ fun armazenar(){
     }
 }
 
-fun remover(){
+fun remover(arm:MutableList<String>){
     while (true) {
-        val arm = mutableListOf<String>()
         print("\nRemova algum dado que você adicionou dentro da lista: ")
         val dado = readLine()!!
 
         if (arm.contains(dado)) {
             arm.remove(dado)
             break
-            println("Dado $dado removido com sucusso!")
+            println("Dado $dado removido com sucesso!")
 
         } else {
             println("O nome $dado não existe na lista")
@@ -61,8 +62,7 @@ fun remover(){
     }
 }
 
-fun atualizar(){
-    val arm = mutableListOf<String>()
+fun atualizar(arm:MutableList<String>){
     while (true) {
 
         print("Adicione um dado na lista: ")
@@ -70,32 +70,32 @@ fun atualizar(){
 
         if (dado.isEmpty()) {
             break
-            println("Dado $dado atualizado com sucusso!")
+            println("Dado $dado atualizado com sucesso!")
         } else {
             arm.add(dado)
         }
     }
 }
 
-fun apresentar(){
-    val arm = mutableListOf<String>()
+fun apresentar(arm:MutableList<String>){
     print(arm)
 }
 
-fun menu() {
+fun menu(arm:MutableList<String>) {
     println("As opções são:\n -Armazenar dados \n -Remover dados\n -Atualizar dados\n -Apresentar todos os dados ")
     println("Digite a opção escolhida:")
     val opc = readLine()!!
 
     when (opc) {
-        "Armazenar dados" -> armazenar()
-        "armazenar dados" -> armazenar()
-        "Remover dados" -> remover()
-        "remover dados" -> remover()
-        "Atualizar dados" -> atualizar()
-        "atualizar dados" -> atualizar()
-        "Apresentar todos os dados" -> apresentar()
-        "apresentar todos os dados" -> apresentar()
+        "Armazenar dados" -> armazenar(arm)
+        "armazenar dados" -> armazenar(arm)
+        "Remover dados" -> remover(arm)
+        "remover dados" -> remover(arm)
+        "Atualizar dados" -> atualizar(arm)
+        "atualizar dados" -> atualizar(arm)
+        "Apresentar todos os dados" -> apresentar(arm)
+        "apresentar todos os dados" -> apresentar(arm)
+        else -> println("deu ruim")
     }
 }
 
