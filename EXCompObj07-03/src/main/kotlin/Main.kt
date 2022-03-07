@@ -1,3 +1,5 @@
+import encap.Cliente
+
 fun main() {
     print("Olá, cliente, digite o seu nome: ")
     val nome = readLine()!!
@@ -7,6 +9,7 @@ fun main() {
 
     print("Digite o seu telefone: ")
     val telefone = readLine()!!
+
 
     try {
         val cliente = Cliente (nome, endereco, telefone)
@@ -58,4 +61,5 @@ fun main() {
         println(e.message)
     }
 }
+
 
