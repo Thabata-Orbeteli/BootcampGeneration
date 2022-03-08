@@ -21,9 +21,9 @@ fun main() {
     while (true) {
         println("\n***Menu***\n")
 
-        println("1 - Informações do Cachorro")
-        println("2 - Informações do Cavalo")
-        println("3 - Informações da Preguiça")
+        println("1 - Som do Cachorro")
+        println("2 - Som do Cavalo")
+        println("3 - Som da Preguiça")
         println("Digite qualquer outra coisa para sair")
 
         var opc = 0
@@ -41,15 +41,9 @@ fun main() {
 
         when (opc) {
 
-            1 -> println(" ${dog.nome}, ${dog.idade},${dog.raca} ${dog.correr()},${dog.som()}")
-
-            2 ->
-                println(" ${cavalo.nome}, ${cavalo.idade},${cavalo.altura} ${cavalo.correr()},${cavalo.som()}")
-
-            3 ->
-                println("${preguica.nome}, ${preguica.idade}, ${preguica.correr()}, ${preguica.som()},${preguica.subir()}")
-
-            else -> break
+            1 -> println(" ${dog.som()}")
+            2 -> println(" ${cavalo.som()}")
+            3 -> println(" ${preguica.som()}")
         }
 
     }

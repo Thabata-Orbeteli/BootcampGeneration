@@ -7,7 +7,7 @@ class cavalo(nome: String, idade: Int, var altura:Double):Animal(nome,idade){
     }
 
     override fun som(){
-        println("O cavalo faz Iiirrrí")
+        println(" Iiirrrí")
     }
 
 }

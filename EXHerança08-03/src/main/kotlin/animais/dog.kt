@@ -7,7 +7,7 @@ class dog (nome: String, idade: Int, var raca:String):Animal(nome,idade) {
     }
 
     override fun som() {
-        println("O cachorro faz Au,au,au")
+        println("Au,au,au")
     }
     
 }
